@@ -7,7 +7,7 @@ import styles from "./Navigation.module.scss";
 
 const Navigation = () => {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <NavLink
         to={routes.home}
         exact
@@ -16,10 +16,20 @@ const Navigation = () => {
       >
         Home
       </NavLink>
-      <NavLink exact to={routes.constructor}>
+      <NavLink
+        exact
+        to={routes.constructor}
+        className={styles.link}
+        activeClassName={styles.active}
+      >
         Constructor
       </NavLink>
-      <NavLink exact to={routes.about}>
+      <NavLink
+        exact
+        to={routes.about}
+        className={styles.link}
+        activeClassName={styles.active}
+      >
         About
       </NavLink>
     </nav>
