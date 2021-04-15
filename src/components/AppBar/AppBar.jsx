@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import Navigation from "../Navigation";
 
-import routes from "../../routes";
+// import routes from "../../routes";
 
 import styles from "./AppBar.module.scss";
 
@@ -12,21 +12,23 @@ import logo from "./Logo.png";
 
 const AppBar = () => {
   return (
-    <header className={styles.bar}>
-      <div className={styles.logo}>
-        <NavLink to={routes.home} className={styles.logoLink}>
-          <img src={logo} alt="" width="50px" height="50px" />
-        </NavLink>
-      </div>
+    <header>
+      <div className={styles.container}>
+        <div className={styles.logo}>
+          <NavLink to="/" className={styles.logoLink}>
+            <img src={logo} alt="" width="50px" height="50px" />
+          </NavLink>
+        </div>
 
-      <Navigation />
-      <img
-        src={defAva}
-        alt=""
-        width="50px"
-        height="50px"
-        className={styles.ava}
-      />
+        <Navigation />
+        <img
+          src={defAva}
+          alt=""
+          width="50px"
+          height="50px"
+          className={styles.ava}
+        />
+      </div>
     </header>
   );
 };

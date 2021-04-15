@@ -1,7 +1,7 @@
-.bar {
-  background-color: #52723a;
-  display: flex;
-}
+// .bar {
+//   background-color: #52723a;
+//   display: flex;
+// }
 
 .ava {
   border-radius: 50%;
@@ -18,4 +18,10 @@
   line-height: 1.17;
   color: white;
   text-decoration: none;
+}
+
+.container {
+  padding: 0px 60px;
+  display: flex;
+  background-color: #52723a;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import routes from "../../routes";
+// import routes from "../../routes";
 
 import styles from "./Navigation.module.scss";
 
@@ -9,7 +9,7 @@ const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <NavLink
-        to={routes.home}
+        to="/"
         exact
         className={styles.link}
         activeClassName={styles.active}
@@ -18,7 +18,7 @@ const Navigation = () => {
       </NavLink>
       <NavLink
         exact
-        to={routes.constructor}
+        to="/constructor"
         className={styles.link}
         activeClassName={styles.active}
       >
@@ -26,7 +26,7 @@ const Navigation = () => {
       </NavLink>
       <NavLink
         exact
-        to={routes.about}
+        to="/about"
         className={styles.link}
         activeClassName={styles.active}
       >

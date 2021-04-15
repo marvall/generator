@@ -1,14 +1,12 @@
-import React, { Component, Suspense, lazy } from "react";
+import { Suspense } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import "./sass/reset.scss";
+import "./sass/main.scss";
 
 // import HomePage from "./components/pages/homePage/HomePage";
 import AppBar from "./components/AppBar";
 
-import routes from "./routes";
-
-const HomePage = lazy(() => import("./components/pages/homePage/HomePage"));
+import { routes } from "./utils/navigation";
 
 function App() {
   return (
@@ -16,8 +14,11 @@ function App() {
       <AppBar />
       <Suspense fallback={<p>Что-то грузится...</p>}>
         <Switch>
-          <Route exact path={routes.home} component={HomePage} />
+          {routes.map(({ path, component, exact }) => (
+            <Route key={path} path={path} component={component} exact={exact} />
+          ))}
         </Switch>
+        <Redirect to="/" />
       </Suspense>
 
       {/* <HomePage /> */}
