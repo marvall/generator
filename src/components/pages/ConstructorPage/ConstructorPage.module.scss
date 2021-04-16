@@ -1,0 +1,80 @@
+.constructorPageContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.constructorPageText {
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.166;
+  color: #000000;
+}
+
+.siteBarSection {
+  background-color: #bfd7ac;
+  padding-top: 15px;
+}
+.materialsSection {
+  background-color: #dfead6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.constructorSection {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 400px) {
+  .siteBarSection,
+  .materialsSection,
+  .constructorSection {
+    width: 100%;
+  }
+  .constructorPageText {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .siteBarSection {
+    width: 300px;
+  }
+  .materialsSection,
+  .constructorSection {
+    width: calc(768px - 300px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .siteBarSection {
+    width: 350px;
+  }
+  .materialsSection,
+  .constructorSection {
+    width: calc(1280px - 350px);
+  }
+  .constructorPageText {
+    width: 260px;
+    padding-left: 30px;
+    text-align: start;
+  }
+}
+
+.sectionSubtitle {
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  padding-left: 65px;
+  width: calc(100% - 65px);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+
+  color: #f5f5f5;
+  background-color: #85ae65;
+}
