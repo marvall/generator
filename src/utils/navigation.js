@@ -1,6 +1,7 @@
 import { lazy } from "react";
 
 const HomePage = lazy(() => import("../components/pages/homePage/HomePage"));
+const ConstructorPage = lazy(() => import("../components/pages/ConstructorPage/ConstrucrorPage"));
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export const routes = [
@@ -11,7 +12,7 @@ export const routes = [
   },
   {
     path: "/constructor",
-    // component: Constructor,
+    component: ConstructorPage,
     exact: true,
   },
   {
