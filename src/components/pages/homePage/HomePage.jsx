@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import Hero from "../../Hero";
+
 import Style from "./HomePage.module.scss";
 
 const CaseArticl = function (word) {
@@ -51,7 +54,8 @@ function HomePage() {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <Hero />
+      {/* <form onSubmit={handleSubmit}>
         <textarea
           className={Style.input}
           type="text"
@@ -64,7 +68,7 @@ function HomePage() {
         />
         <button type="submit">SEND</button>
       </form>
-      <div className={Style.output}>{outputText}</div>
+      <div className={Style.output}>{outputText}</div> */}
     </>
   );
 }
