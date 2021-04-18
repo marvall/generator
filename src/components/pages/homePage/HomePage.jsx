@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-import Hero from "../../Hero";
+import Hero from "./Hero";
+import Movies from './Movies';
+import WebSites from './WebSites';
 
 import Style from "./HomePage.module.scss";
 
@@ -55,6 +57,9 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <Movies />
+      <WebSites />
+      
       {/* <form onSubmit={handleSubmit}>
         <textarea
           className={Style.input}

@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./sass/main.scss";
 
 // import HomePage from "./components/pages/homePage/HomePage";
-import AppBar from "./components/AppBar";
+import AppBar from "./components/header/Navigation/AppBar";
 
 import { routes } from "./utils/navigation";
 

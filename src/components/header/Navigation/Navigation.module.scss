@@ -1,16 +1,15 @@
 .nav {
-  padding: 28px 557px 27px 39px;
+  display: flex;
+  align-items: center;
 }
 
 .link {
   text-decoration: none;
   color: black;
-  margin: 28px 0px;
   font-weight: 700;
   font-size: 24px;
-  margin-right: 25px;
-  &:nth-child(3n) {
-    margin-right: 0px;
+  &:not(:last-child){
+    margin-right: 28px;
   }
   &:hover {
     color: #b2bf1a;
