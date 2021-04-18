@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import Navigation from "..";
+import Navigation from "../Navigation";
 //import Container from "../../../Container";
 // import routes from "../../routes";
 
@@ -12,8 +12,7 @@ import logo from "./Logo.png";
 
 const AppBar = () => {
   return (
-  
-      <header className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.nav}>
@@ -32,9 +31,9 @@ const AppBar = () => {
             height="50px"
             className={styles.ava}
           />
-          </div>
         </div>
-      </header>
+      </div>
+    </header>
   );
 };
 

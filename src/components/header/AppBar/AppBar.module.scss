@@ -1,25 +1,25 @@
-@import '../../../../sass/container.scss';
+@import "../../../sass/container.scss";
 
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav{
+.nav {
   display: flex;
   align-items: center;
 }
 .ava {
   border-radius: 50%;
 }
-.logo{
+.logo {
   margin-right: 60px;
 }
 .logoLink {
   display: block;
 }
 
-.header{
+.header {
   display: flex;
   align-items: center;
   height: 80px;
