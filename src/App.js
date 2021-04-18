@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-// import 'modern-normalize/modern-normalize.css';
+
 import './sass/main.scss';
 
 // import HomePage from "./components/pages/homePage/HomePage";
