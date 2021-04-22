@@ -1,0 +1,12 @@
+.testInput {
+  width: 100px;
+  border-radius: 8px;
+  border-color: #bfd7ac;
+  background-color: rgb(245, 245, 245);
+
+  &:hover,
+  &:focus {
+    background-color: white;
+    outline-color: #b2bf1a;
+  }
+}
