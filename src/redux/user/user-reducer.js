@@ -2,17 +2,25 @@ import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 // import authActions from './auth-actions';
 
-const initialUserState = { name: null, email: null };
 // const reducer = (state = {}, action) => state;//болванка
 
+const initialUserState = { name: null, email: null };
+// const initialUserState = JSON.parse(window.localStorage.getItem('user')) ?? {
+//   name: null,
+//   email: null,
+// };
 const user = (state = initialUserState, action) => state;
+
 // const user = createReducer(initialUserState, {
 //   [authActions.registerSuccess]: (_, action) => action.payload.user,
 //   [authActions.loginSuccess]: (_, action) => action.payload.user,
 //   [authActions.logoutSuccess]: () => initialUserState,
 //   [authActions.getCurrentUserSuccess]: (_, action) => action.payload, // без user,так как приходит просто user
 // });
-const token = (state = null, action) => state;
+
+const initialTokenState =
+  JSON.parse(window.localStorage.getItem('user')) ?? null;
+const token = (state = initialTokenState, action) => state;
 // const token = createReducer(null, {
 //   [authActions.registerSuccess]: (_, action) => action.payload.token,
 //   [authActions.loginSuccess]: (_, action) => action.payload.token,

@@ -13,12 +13,18 @@ import storage from 'redux-persist/lib/storage';
 import constructorReducer from './constructor/constructor-reducer';
 import userReducer from './user/user-reducer';
 
+// const authPersistConfig = {
+//   key: 'user', //'token'
+//   version: 1,
+//   storage,
+//   //TODO раскомментить когда будет бекэнд с авторизацией
+//     // whitelist: ['token'],
+// };
 const authPersistConfig = {
   key: 'user', //'token'
   version: 1,
   storage,
-  //TODO раскомментить когда будет бекэнд с авторизацией
-  //   whitelist: ['token'],
+  whitelist: ['token'],
 };
 
 const store = configureStore({
