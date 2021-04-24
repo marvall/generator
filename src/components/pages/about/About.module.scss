@@ -1,3 +1,78 @@
-@import '../../../../sass/container.scss';
+@import "../../../sass/container.scss";
 
-.about{}
+.title {
+  margin-top: 20px;
+  font-size: 50px;
+  color: green;
+  font-weight: 900;
+  text-align: center;
+}
+
+.discription {
+  text-align: center;
+  font-size: 25px;
+}
+.contactsList {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.paragraph {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.contactTitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contactName {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+}
+.contactRole {
+  font-size: 12px;
+  line-height: 12px;
+}
+.contactPhoto {
+  height: auto;
+  width: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.contactCard {
+  height: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contactCard:focus,
+.contactCard:hover {
+  transform: scale(1.04);
+}
+.instagram:hover,
+.github:hover {
+  transform: scale(1.04);
+}
+
+.socialList {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram {
+  margin-right: 20px;
+}
+@media screen and (max-width: 320px) {
+  .contactsList {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
