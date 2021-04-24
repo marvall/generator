@@ -1,12 +1,12 @@
-import { Suspense } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Suspense } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
-import "./sass/main.scss";
+import './sass/main.scss';
 
 // import HomePage from "./components/pages/homePage/HomePage";
-import AppBar from "./components/header/AppBar";
+import AppBar from './components/header/AppBar';
 
-import { routes } from "./utils/navigation";
+import { routes } from './utils/navigation';
 
 function App() {
   return (
