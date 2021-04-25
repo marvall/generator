@@ -1,15 +1,15 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // import routes from "../../routes";
 
-import styles from "./Navigation.module.scss";
+import styles from './Navigation.module.scss';
 
 const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <NavLink
-        to="/"
+        to="/home"
         exact
         className={styles.link}
         activeClassName={styles.active}
