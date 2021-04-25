@@ -1,2 +1,51 @@
-.movies__item {
+.youtube__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.you__Banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2c2a5;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  height: 150px;
+  padding: 20px 16px 20px 16px;
+  margin-bottom: 10px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: #c6d3bb;
+}
+
+.movie__item__title {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.movie__item__descr {
+  color: black;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+@media screen and (min-width: 768px) {
+  .movie__item__descr {
+    width: 320px;
+  }
+  .you__Banner {
+    height: 200px;
+    width: 360px;
+  }
 }
