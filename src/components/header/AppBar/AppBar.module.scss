@@ -1,4 +1,4 @@
-@import "../../../sass/container.scss";
+@import '../../../sass/container.scss';
 
 .wrapper {
   display: flex;
@@ -11,10 +11,13 @@
 }
 .ava {
   border-radius: 50%;
+  border: 2px solid black;
 }
+
 .logo {
-  margin-right: 60px;
+  margin-right: 0px;
 }
+
 .logoLink {
   display: block;
 }
@@ -24,4 +27,40 @@
   align-items: center;
   height: 80px;
   background-color: #52723a;
+}
+
+.menuButton {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    color: #b2bf1a;
+  }
+
+  &:focus {
+    color: #b2bf1a;
+  }
+}
+
+.close {
+  display: none;
+}
+
+// media
+
+@media screen and (min-width: 400px) {
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 60px;
+  }
+
+  .menuButton {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
 }

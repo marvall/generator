@@ -1,5 +1,5 @@
 .nav {
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -8,9 +8,10 @@
   color: black;
   font-weight: 700;
   font-size: 24px;
-  &:not(:last-child){
-    margin-right: 28px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
+
   &:hover {
     color: #b2bf1a;
   }
@@ -22,4 +23,23 @@
 
 .active {
   color: #b2bf1a;
+}
+
+@media screen and (min-width: 400px) {
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .link {
+    &:not(:last-child) {
+      margin-right: 19px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
 }
