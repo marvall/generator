@@ -4,6 +4,7 @@ const HomePage = lazy(() => import('../components/pages/homePage/HomePage'));
 const ConstructorPage = lazy(() =>
   import('../components/pages/constructor/ConstrucrorPage'),
 );
+const About = lazy(() => import('../components/pages/about/About'));
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export const routes = [
@@ -24,7 +25,7 @@ export const routes = [
   },
   {
     path: '/about',
-    // component: About,
+    component: About,
     exact: true,
   },
 ];
