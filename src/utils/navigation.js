@@ -1,23 +1,30 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
-const HomePage = lazy(() => import("../components/pages/homePage/HomePage"));
-const ConstructorPage = lazy(() => import("../components/pages/constructor/ConstrucrorPage"));
-const About = lazy(() => import("../components/pages/about/About"));
+const HomePage = lazy(() => import('../components/pages/homePage/HomePage'));
+const ConstructorPage = lazy(() =>
+  import('../components/pages/constructor/ConstrucrorPage'),
+);
+const About = lazy(() => import('../components/pages/about/About'));
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export const routes = [
   {
-    path: "/",
+    path: '/',
     component: HomePage,
     exact: true,
   },
   {
-    path: "/constructor",
+    path: '/home',
+    component: HomePage,
+    exact: false,
+  },
+  {
+    path: '/constructor',
     component: ConstructorPage,
     exact: true,
   },
   {
-    path: "/about",
+    path: '/about',
     component: About,
     exact: true,
   },

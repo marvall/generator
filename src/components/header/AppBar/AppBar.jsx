@@ -1,14 +1,14 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import Navigation from "../Navigation";
+import Navigation from '../Navigation';
 //import Container from "../../../Container";
 // import routes from "../../routes";
+import Avatar from '../Avatar';
 
-import styles from "./AppBar.module.scss";
+import styles from './AppBar.module.scss';
 
-import defAva from "./defaultAvatar.png";
-import logo from "./Logo.png";
+import logo from './Logo.png';
 
 const AppBar = () => {
   return (
@@ -24,13 +24,7 @@ const AppBar = () => {
 
             <Navigation />
           </div>
-          <img
-            src={defAva}
-            alt=""
-            width="50px"
-            height="50px"
-            className={styles.ava}
-          />
+          <Avatar />
         </div>
       </div>
     </header>
