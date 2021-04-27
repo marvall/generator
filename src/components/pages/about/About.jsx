@@ -1,8 +1,8 @@
-import Style from "./About.module.scss";
-import students from "../../../utils/students";
-import instagram from "../../../images/icons/Instagram_icon.svg";
-import github from "../../../images/icons/github_icon.svg";
-
+import Style from './About.module.scss';
+import students from '../../../utils/students';
+import instagram from '../../../images/icons/Instagram_icon.svg';
+import github from '../../../images/icons/github_icon.svg';
+import uuid from 'uuid';
 
 const About = () => {
   return (
@@ -14,8 +14,8 @@ const About = () => {
         </p>
         <h2 className={Style.contactTitle}>Наша команда</h2>
         <ul className={Style.contactsList}>
-          {students.map((item) => (
-            <li className={Style.contactCard} key={item.id}>
+          {students.map(item => (
+            <li className={Style.contactCard} key={uuid()}>
               <div></div>
               <img
                 className={Style.contactPhoto}
@@ -25,7 +25,11 @@ const About = () => {
               <ul className={Style.socialList}>
                 <li>
                   <a href={item.instagram}>
-                    <img className={Style.instagram} src={instagram} alt="instagram" />
+                    <img
+                      className={Style.instagram}
+                      src={instagram}
+                      alt="instagram"
+                    />
                   </a>
                 </li>
                 <li>
