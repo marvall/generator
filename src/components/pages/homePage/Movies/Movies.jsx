@@ -33,6 +33,11 @@ const Movies = () => {
         </h2>
         <Carousel
           responsive={responsive}
+          autoPlay={true}
+          autoPlaySpeed={15000}
+          infinite={true}
+          transitionDuration={500}
+          focusOnSelect={true}
           // removeArrowOnDeviceType={['tablet', 'mobile']}
         >
           <MovieItem />

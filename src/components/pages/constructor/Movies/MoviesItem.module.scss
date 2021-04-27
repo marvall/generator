@@ -1,11 +1,3 @@
-.movie__wrapper {
-  &:hover {
-    background-color: rgba(57, 59, 55, 0.2);
-    z-index: 2;
-    position: relative;
-    border-radius: 8px;
-  }
-}
 .youtube__link {
   display: flex;
   flex-direction: column;
@@ -23,13 +15,13 @@
   box-sizing: border-box;
   border-radius: 8px;
   width: 100%;
-  height: 150px;
+  height: 120px;
   padding: 20px 16px 20px 16px;
   margin-bottom: 10px;
 
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 1.17;
   text-align: center;
 
@@ -39,6 +31,7 @@
 .movie__item__title {
   color: black;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .movie__item__descr {
@@ -46,15 +39,11 @@
   text-align: left;
   font-size: 14px;
   line-height: 1.14;
-  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .movie__item__descr {
-    width: 320px;
-  }
   .you__Banner {
-    height: 200px;
-    width: 360px;
+    height: 120px;
+    width: 250px;
   }
 }

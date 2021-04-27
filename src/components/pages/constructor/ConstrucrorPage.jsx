@@ -1,32 +1,19 @@
-import Generator from "./generator";
+import Generator from './generator';
+import SiteBar from './SiteBar/SiteBar';
+import Movies from './Movies/Movies';
 
-import styles from "./ConstructorPage.module.scss";
+import styles from './ConstructorPage.module.scss';
 
 function ConstructorPage() {
-  
-
   return (
-    <div className={`${styles.page} ${styles.container}`}>
-      <section className={styles.siteBarSection}>
-        <h2 className={styles.sectionSubtitle}>Список кейсов</h2>
-
-        {/* SiteBar*/}
-       
-      </section>
+    <div className={`${styles.page}`}>
+      <SiteBar />
 
       <div className={styles.content}>
-        <section className={styles.materialsSection}>
-          <p className={styles.text}>
-            По выбранному кейсу можно ознакомиться с такими материалами:
-          </p>
-          {/* дальше компонент с видео*/}
-         
-        </section>
-
+        <Movies />
         <section className={styles.constructorSection}>
           {/* компонент с телом конструктора*/}
-          <Generator/>
-          
+          <Generator />
         </section>
       </div>
     </div>
