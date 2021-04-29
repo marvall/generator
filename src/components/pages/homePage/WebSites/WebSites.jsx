@@ -1,5 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import WebSiteItem from './WebSiteItem/WebSiteItem';
+import WebSiteItem1 from './WebSiteItem/WebSiteItem1';
 
 import 'react-multi-carousel/lib/styles.css';
 import Style from './WebSites.module.scss';
@@ -30,19 +31,29 @@ const WebSite = () => {
           РЕКОМЕНДУЕМЫЕ РЕСУРСЫ <br /> ДЛЯ УЛУЧШЕНИЯ УРОВНЯ АНГЛИЙСКОГО ЯЗЫКА
         </h2>
         <Carousel
-          arrows={false}
-          showDots={true}
+          arrows={true}
+          // showDots={true}
+          // swipeable={true}
+          // draggable={true}
+          keyBoardControl={true}
+          responsive={responsive}
+        >
+          <WebSiteItem />
+          <WebSiteItem />
+          <WebSiteItem />
+          <WebSiteItem />
+        </Carousel>
+
+        <Carousel
+          arrows={true}
+          showDots={false}
           responsive={responsive}
           keyBoardControl={true}
         >
-          <div>
-            <WebSiteItem />
-            <WebSiteItem />
-          </div>
-          <div>
-            <WebSiteItem />
-            <WebSiteItem />
-          </div>
+          <WebSiteItem1 />
+          <WebSiteItem1 />
+          <WebSiteItem1 />
+          <WebSiteItem1 />
         </Carousel>
       </div>
     </section>

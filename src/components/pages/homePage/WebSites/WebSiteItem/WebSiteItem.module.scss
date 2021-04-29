@@ -1,4 +1,5 @@
-.site__link {
+.site__link,
+.site__link1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +13,8 @@
   cursor: pointer;
 }
 
-.site__Banner {
+.site__Banner,
+.site__Banner1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +57,13 @@
     margin-bottom: 30px;
     padding: 0px 0px 0px 0px;
   }
+
+  .site__link1 {
+    flex-direction: row-reverse;
+    margin-bottom: 30px;
+    padding: 0px 0px 0px 10px;
+  }
+
   .site__title {
     text-align: left;
   }
@@ -65,17 +74,35 @@
     margin-bottom: 0px;
     margin-right: 10px;
   }
+  .site__Banner1 {
+    width: 180px;
+    height: 200px;
+    padding: 20px 10px 20px 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-  .site__link {
+  .site__link,
+  .site__link1 {
     margin-bottom: 20px;
   }
+  .site__link1 {
+    padding-left: 20px;
+  }
+
   .site__Banner {
     width: 330px;
     height: 200px;
     padding: 0;
     margin-right: 20px;
+  }
+  .site__Banner1 {
+    width: 200px;
+    height: 120px;
+    padding: 0;
+    margin-left: 20px;
   }
 }
 
