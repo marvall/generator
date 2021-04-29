@@ -21,11 +21,11 @@ export const routes = [
   {
     path: '/constructor',
     component: ConstructorPage,
-    exact: true,
+    exact: false,
   },
   {
     path: '/about',
     component: About,
-    exact: true,
+    exact: false,
   },
 ];

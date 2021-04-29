@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Route, NavLink } from 'react-router-dom';
+
+import { withRouter } from 'react-router-dom';
 import ReactModal from 'react-modal';
 
 import { Icon } from '@iconify/react';
@@ -13,28 +15,31 @@ import styles from './Avatar.module.scss';
 
 ReactModal.setAppElement('#root');
 
-const Avatar = () => {
+const Avatar = props => {
+  const { pathname } = props.location;
+
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [path, setPath] = useState('/home/login');
+  const [path, setPath] = useState('');
 
   function openModal() {
+    pathname === '/' ? setPath('/home') : setPath(pathname);
     setIsOpen(true);
   }
 
-  function afterOpenModal() {
-    setPath('/');
-  }
+  function afterOpenModal() {}
 
   function closeModal() {
     setIsOpen(false);
-    setPath('/home/login');
   }
 
   return (
     <div>
-      <NavLink to={path} className={styles.Avatar} onClick={openModal}>
+      <NavLink
+        to={`${pathname === '/' ? '/home' : pathname}/login`}
+        className={styles.Avatar}
+        onClick={openModal}
+      >
         <Icon icon={userAvatarFilled} />
-        Войти
       </NavLink>
 
       <ReactModal
@@ -46,9 +51,9 @@ const Avatar = () => {
         className={styles.Modal}
         overlayClassName={styles.Overlay}
       >
-        <AuthNav />
-        <Route path="/home/register" component={SignUpPage} />
-        <Route path="/home/login" component={LoginPage} />
+        <AuthNav path={path} />
+        <Route path={`${path}/register`} component={SignUpPage} />
+        <Route path={`${path}/login`} component={LoginPage} />
 
         <NavLink
           to={path}
@@ -63,4 +68,4 @@ const Avatar = () => {
   );
 };
 
-export default Avatar;
+export default withRouter(Avatar);
